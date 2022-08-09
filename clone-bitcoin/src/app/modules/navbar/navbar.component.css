@@ -1,0 +1,23 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #F5F5F5;;
+}
+
+.nav-items{
+    width: 100%;
+    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 19px;
+}
+
+.nav-items > p {
+    padding-top: 32px;
+}
+
+.logo{
+    height: 41px;
+    padding: 20px 100.57px 19px 0px;
+}
