@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { CriptoComponent } from './cripto.component';
 
 const routes: Routes = [
   // Rotas da aplicação
   {
-    path: '',
-    component: AppComponent,
-    loadChildren: () =>
-      import('./modules/cripto/cripto.module').then((m) => m.CriptoModule),
+    path: '/:cripto',
+    component: CriptoComponent,
   },
 ];
 
@@ -16,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class CriptoRoutingModule {}

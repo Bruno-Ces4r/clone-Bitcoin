@@ -1,0 +1,28 @@
+@import "./../../../../mixin";
+
+.sub-nav {
+  width: 100%;
+  background-color: var(--color-white);
+  height: 62px;
+  border-bottom: 1px solid #eff2f5;
+
+  .sub-items {
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    @include grid-width;
+
+    a {
+      text-decoration: none;
+      color: var(--primary-typography);
+      padding-right: 80px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+
+      img {
+        padding-right: 15px;
+      }
+    }
+  }
+}
