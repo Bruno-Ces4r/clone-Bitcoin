@@ -11,7 +11,27 @@ export class SubHeaderComponent implements OnInit {
     {
       routerPath: 'bitcoin',
       imagePath: 'assets/bitcoin.png',
-      alt: 'bitcoin',
+      name: 'bitcoin',
+    },
+    {
+      routerPath: 'ethereum',
+      imagePath: 'assets/ethereum.png',
+      name: 'Ethereum',
+    },
+    {
+      routerPath: 'tether',
+      imagePath: 'assets/tether.png',
+      name: 'Tether',
+    },
+    {
+      routerPath: 'solana',
+      imagePath: 'assets/solana.png',
+      name: 'Solana',
+    },
+    {
+      routerPath: 'shiba-inu',
+      imagePath: 'assets/shiba.png',
+      name: 'Shiba Inu',
     },
   ];
 

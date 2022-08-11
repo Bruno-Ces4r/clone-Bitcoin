@@ -1,0 +1,61 @@
+@import "./../../../mixin.scss";
+
+.main {
+  width: 100%;
+  background-color: var(--color-white);
+
+  .content {
+    margin: 60px auto 0px auto;
+    @include grid-width;
+
+    .recommendations {
+      height: 41px;
+      background-color: rgba(22, 199, 132, 0.1);
+      display: flex;
+      align-items: center;
+
+      p {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #16c784;
+      }
+      span {
+        color: #2861fb;
+      }
+    }
+
+    .informations {
+      margin-top: 101px;
+      display: flex;
+
+      .cripto {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+
+        .name-cripto {
+          font-size: 32px;
+          line-height: 39px;
+          color: var(--color-black);
+        }
+
+        img {
+          height: 60px;
+          width: 60px;
+          margin-right: 19px;
+        }
+        .btc {
+          display: flex;
+          align-items: center;
+          margin-left: 15px;
+          height: 19px;
+          background-color: #eff2f5;
+          color: #58667e;
+          padding: 6px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

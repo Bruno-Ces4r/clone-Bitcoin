@@ -1,28 +1,13 @@
 <div class="sub-nav">
   <div class="sub-items">
-    <a routerLink="/bitcoin">
-      <img src="assets/bitcoin.png" alt="Bitcoin" />
-      Bitcoin
-    </a>
-
-    <a routerLink="">
-      <img src="assets/ethereum.png" alt="Ethereum" />
-      Ethereum
-    </a>
-
-    <a routerLink="">
-      <img src="assets/tether.png" alt="Theter" />
-      Theter
-    </a>
-
-    <a routerLink="">
-      <img src="assets/solana.png" alt="Solana" />
-      Solana
-    </a>
-
-    <a routerLink="">
-      <img src="assets/shiba.png" alt="Shiba Inu" />
-      Shiba Inu
-    </a>
+    <ng-container *ngFor="let subheaderitem of subHeaderItems">
+      <!--Passei a rota no (a), Passei o src na img pelo path, passei o (alt)-->
+      <a [routerLink]="'/' + subheaderitem.routerPath">
+        <!--Engloba a propriedade no colchetes, recebe um valor (sem ser string e etc)-->
+        <img [src]="subheaderitem.imagePath" [alt]="subheaderitem.name" />
+        {{ subheaderitem.name }}
+        <!--Nome dos Itens-->
+      </a>
+    </ng-container>
   </div>
 </div>

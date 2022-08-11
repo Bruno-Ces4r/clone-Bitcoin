@@ -5,13 +5,13 @@ import { CriptoComponent } from './cripto.component';
 const routes: Routes = [
   // Rotas da aplicação
   {
-    path: '/:cripto',
+    path: '',
     component: CriptoComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class CriptoRoutingModule {}
