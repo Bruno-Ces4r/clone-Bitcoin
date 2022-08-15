@@ -10,31 +10,54 @@
     </div>
     <div class="sector-cripto">
       <div class="cripto">
-        <img class="img-cripto" src="assets/bitcoin.png" alt="" />
-        <span class="name-cripto">Bitcoin</span>
-        <span class="btc">BTC</span>
-        <span class="star"
+        <img
+          class="img-cripto"
+          [src]="'assets/' + cripto?.name + '.png'"
+          alt=""
+        />
+        <span class="name-cripto">{{ criptoName }}</span>
+        <span class="btc">{{ cripto?.tag }}</span>
+        <span
+          class="star"
+          (click)="setFavoriteCripto()"
+          [ngClass]="{ filled: cripto?.isFavorite }"
           ><img class="star-image" src="assets/star.png" alt=""
         /></span>
       </div>
       <div class="sector-value">
-        <span class="currency-value">$23,289.34</span>
+        <span class="currency-value">{{ cripto?.currencyValue }}</span>
         <span class="rate">
           <img src="assets/polygon-white.png" alt="seta" />
-          <span class="rate-porcent">2,79%</span>
+          <span class="rate-porcent">{{ cripto?.lastRate }}</span>
         </span>
       </div>
     </div>
 
     <div class="sector-informations">
-      <span class="rank">Rank #1</span>
-      <span class="type">Coin</span>
-      <span class="list-count">On 3384458 watchlists</span>
-      <span class="eth">13.73 ETH</span>
+      <span class="rank">Rank {{ cripto?.rank }}</span>
+      <span class="type">{{ cripto?.type }}</span>
+      <span class="list-count">On {{ cripto?.watchListCount }} watchlists</span>
+      <span class="eth">13.73 {{ cripto?.tag }}</span>
       <span class="fall">
         <img src="assets/polygon-red.png" alt="seta-red" />
         <span class="fall-value">4,93%</span>
       </span>
+    </div>
+
+    <div class="sector-graphic">
+      <img class="graphic-image" [src]="cripto?.graph" [alt]="cripto?.name" />
+      <div class="scenario-wrapper">
+        <ng-container *ngFor="let scenario of scenarios">
+          <div class="scenario-child">
+            <span class="scenario-scenario">{{ scenario?.scenario }}</span>
+            <span class="scenario-value">{{ scenario?.value }}</span>
+            <span class="rate">
+              <img src="assets/polygon-green.png" alt="seta" />
+              <span class="scenario-rate">{{ scenario?.rate }}</span>
+            </span>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
 </main>
