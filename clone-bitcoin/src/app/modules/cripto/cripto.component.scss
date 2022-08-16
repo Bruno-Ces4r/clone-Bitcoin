@@ -33,6 +33,7 @@
         display: flex;
         align-items: center;
         font-weight: 700;
+        width: 334px;
 
         .name-cripto {
           font-size: 32px;
@@ -79,7 +80,7 @@
       .sector-value {
         display: flex;
         align-items: center;
-        margin-left: 555px;
+        margin-left: 500px;
         font-weight: 700;
 
         .currency-value {
@@ -110,51 +111,60 @@
       margin-top: 15px;
       font-weight: 700;
 
-      .rank {
-        margin-left: 80px;
-        background-color: #58667e;
-        border-radius: 4px;
-        font-size: 12px;
-        color: #eff2f5;
-        padding: 2px 6px;
-      }
-
-      .type {
-        background-color: #eff2f5;
-        border-radius: 4px;
-        padding: 2px 6px;
-        color: #58667e;
-        font-size: 12px;
-        margin-left: 27px;
-      }
-
-      .list-count {
-        background-color: #eff2f5;
-        border-radius: 4px;
-        color: #58667e;
-        padding: 2px 6px;
-        font-size: 12px;
-        margin-left: 12px;
-      }
-
-      .eth {
-        margin-left: 478px;
-        color: #58667e;
-        font-size: 12px;
-        font-weight: 400;
-      }
-
-      .fall {
-        display: flex;
-        align-items: center;
-        margin-left: 16px;
-        margin-top: -2px;
-
-        .fall-value {
-          color: #ea3943;
-          font-weight: 400;
-          margin-top: -2px;
+      .sector-rank {
+        width: 373px;
+        .rank {
+          margin-left: 80px;
+          background-color: #58667e;
+          border-radius: 4px;
           font-size: 12px;
+          color: #eff2f5;
+          padding: 2px 6px;
+        }
+
+        .type {
+          background-color: #eff2f5;
+          border-radius: 4px;
+          padding: 2px 6px;
+          color: #58667e;
+          font-size: 12px;
+          margin-left: 27px;
+        }
+
+        .list-count {
+          background-color: #eff2f5;
+          border-radius: 4px;
+          color: #58667e;
+          padding: 2px 6px;
+          font-size: 12px;
+          margin-left: 12px;
+        }
+      }
+
+      .sector-fall {
+        display: flex;
+        margin-left: 461px;
+        justify-content: center;
+        align-items: center;
+
+        .eth {
+          color: #58667e;
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        .fall {
+          display: flex;
+          align-items: center;
+          margin-left: 16px;
+          margin-top: -2px;
+
+          .fall-value {
+            color: #ea3943;
+            font-weight: 400;
+            margin-top: -2px;
+            font-size: 12px;
+          }
         }
       }
     }

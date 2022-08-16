@@ -34,14 +34,20 @@
     </div>
 
     <div class="sector-informations">
-      <span class="rank">Rank {{ cripto?.rank }}</span>
-      <span class="type">{{ cripto?.type }}</span>
-      <span class="list-count">On {{ cripto?.watchListCount }} watchlists</span>
-      <span class="eth">13.73 {{ cripto?.tag }}</span>
-      <span class="fall">
-        <img src="assets/polygon-red.png" alt="seta-red" />
-        <span class="fall-value">4,93%</span>
-      </span>
+      <div class="sector-rank">
+        <span class="rank">Rank {{ cripto?.rank }}</span>
+        <span class="type">{{ cripto?.type }}</span>
+        <span class="list-count"
+          >On {{ cripto?.watchListCount }} watchlists</span
+        >
+      </div>
+      <div class="sector-fall">
+        <span class="eth">13.73 {{ cripto?.tag }}</span>
+        <span class="fall">
+          <img src="assets/polygon-red.png" alt="seta-red" />
+          <span class="fall-value">4,93%</span>
+        </span>
+      </div>
     </div>
 
     <div class="sector-graphic">
