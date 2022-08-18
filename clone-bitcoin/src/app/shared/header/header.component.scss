@@ -3,7 +3,7 @@
 .nav-bar {
   width: 100%;
   background-color: var(--color-white);
-  height: 60px;
+  min-height: 60px;
   border-bottom: 1px solid #eff2f5;
 
   .nav-items {
@@ -11,6 +11,10 @@
     align-items: center;
     margin: 20px auto;
     @include grid-width;
+    flex-wrap: wrap; //Quebra quando acaba espaço
+    row-gap: 20px; // Espaçamento entre linhas quando quebra
+    width: 100%;
+
     a {
       padding-right: 80px;
     }

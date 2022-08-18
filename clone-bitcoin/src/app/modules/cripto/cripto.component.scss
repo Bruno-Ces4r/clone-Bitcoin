@@ -3,13 +3,14 @@
 .main {
   width: 100%;
   background-color: #f9fbfd;
-  padding: 60px 0;
+  padding: 60px 0px 0px 0px;
   .content {
     margin: 0 auto;
     @include grid-width;
+    width: 100%;
 
     .recommendations {
-      height: 41px;
+      min-height: 41px;
       background-color: rgba(22, 199, 132, 0.1);
       display: flex;
       align-items: center;
@@ -27,7 +28,8 @@
 
     .sector-cripto {
       display: flex;
-      margin-top: 60px;
+      margin-top: 45px;
+      // justify-content: space-between;
 
       .cripto {
         display: flex;
@@ -80,8 +82,8 @@
       .sector-value {
         display: flex;
         align-items: center;
-        margin-left: 500px;
         font-weight: 700;
+        margin-left: 400px;
 
         .currency-value {
           font-size: 32px;
@@ -108,6 +110,7 @@
 
     .sector-informations {
       display: flex;
+      // justify-content: space-between;
       margin-top: 15px;
       font-weight: 700;
 
@@ -143,9 +146,9 @@
 
       .sector-fall {
         display: flex;
-        margin-left: 461px;
         justify-content: center;
         align-items: center;
+        margin-left: 365px;
 
         .eth {
           color: #58667e;
@@ -170,15 +173,22 @@
     }
 
     .sector-graphic {
+      width: 100%;
       margin-top: 61px;
       margin-bottom: 40px;
       display: flex;
       flex-direction: row;
       column-gap: 120px;
 
-      .graphic-image {
-        max-width: 720px;
-        max-height: 348px;
+      .image-preferences {
+        width: 720px;
+        height: 348px;
+        display: flex;
+        width: 100%;
+        .graphic-image {
+          max-width: 720px;
+          max-height: 348px;
+        }
       }
 
       .scenario-wrapper {
@@ -187,7 +197,7 @@
         width: 100%;
         max-width: 100%;
         flex-wrap: wrap;
-        column-gap: 130px;
+        column-gap: 80px;
         font-weight: 700;
 
         .scenario-child {
@@ -220,5 +230,241 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1398px) {
+  .main .content .sector-graphic .scenario-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    font-weight: 700;
+  }
+
+  .main .content .sector-graphic {
+    width: 100%;
+    margin-top: 61px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 120px;
+  }
+
+  .main .content .sector-graphic .graphic-image {
+    width: 620px;
+    height: 348px;
+  }
+
+  .main .content .sector-cripto .sector-value {
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    font-weight: 700;
+  }
+
+  .main .content .sector-informations .sector-fall {
+    display: flex;
+    margin-left: 364px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+//1127 ele quebra para uma coluna no wrapped
+
+@media only screen and (max-width: 1145px) {
+  .main .content .sector-graphic {
+    width: 100%;
+    margin-top: 61px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .main .content .sector-graphic .image-preferences {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 348px;
+    margin-bottom: 60px;
+  }
+
+  .main .content .sector-cripto {
+    display: flex;
+    margin-top: 45px;
+    justify-content: space-around;
+  }
+
+  .main .content .sector-cripto .sector-value {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 0px;
+  }
+
+  .main .content .sector-informations {
+    display: flex;
+    margin-top: 15px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    // gap: 112px;
+  }
+
+  .main .content .sector-rank {
+    margin: 0 auto;
+  }
+
+  .main .content .sector-informations .sector-fall {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main .content .sector-graphic .scenario-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 720px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 110px;
+    padding-left: 40px;
+    justify-content: center;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .main .content .sector-cripto {
+    display: block;
+    margin-top: 45px;
+  }
+
+  .main .content .sector-cripto .sector-value {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 12px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-top: 15px;
+  }
+
+  .main .content .sector-cripto .sector-value .currency-value {
+    font-size: 20px;
+  }
+
+  .main .content .sector-cripto .sector-value .rate {
+    margin-left: 15px;
+    width: 69px;
+    height: 22px;
+    background-color: #16c784;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+  }
+
+  .main .content .sector-informations {
+    display: flex;
+    margin-top: 15px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-left: 12px;
+    justify-content: flex-start;
+  }
+
+  .main .content .sector-informations .sector-rank {
+    width: auto;
+    margin: 0px;
+
+    .rank {
+      background-color: #58667e;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #eff2f5;
+      padding: 2px 6px;
+      margin-left: 0px;
+    }
+
+    .type {
+      background-color: #eff2f5;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #58667e;
+      font-size: 12px;
+      margin-left: 12px;
+    }
+  }
+
+  .main .content .sector-informations .sector-fall {
+    display: flex;
+    margin: 0px 0px 0px 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main .content .sector-graphic .image-preferences .graphic-image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main .content .sector-cripto .cripto {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 3px;
+
+    .img-cripto {
+      height: 35px;
+      width: 35px;
+      margin-right: 0px;
+    }
+
+    .name-cripto {
+      font-size: 25px;
+      line-height: 39px;
+      color: var(--color-black);
+    }
+
+    .star {
+      margin-left: 15px;
+      padding: 4px 5px;
+      border: 1px solid #cfd6e4;
+      background-color: #ffffff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .main .content .sector-cripto .cripto {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  .main .content .sector-graphic .scenario-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 720px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 700;
+    column-gap: 0px;
   }
 }
