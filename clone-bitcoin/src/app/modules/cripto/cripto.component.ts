@@ -16,6 +16,7 @@ export class CriptoComponent implements OnInit {
   scenarios: Scenario[] = [];
   cripto?: Cripto;
   criptoName = '';
+  loading = false;
 
   constructor(private criptoService: CriptoService, private router: Router) {}
 
@@ -27,14 +28,17 @@ export class CriptoComponent implements OnInit {
 
   async getCripto(cripto: string) {
     try {
+      this.loading = true;
       this.cripto = await this.criptoService
         .getCriptoService(cripto)
         .toPromise();
       this.capitalizeName();
 
       this.scenarios = !!this.cripto?.scenarios ? this.cripto.scenarios : [];
+      this.loading = false;
     } catch (e) {
       this.scenarios = [];
+      this.loading = false;
     }
   }
 

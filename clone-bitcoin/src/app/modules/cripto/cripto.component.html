@@ -10,12 +10,26 @@
     </div>
     <div class="sector-cripto">
       <div class="cripto">
-        <img
-          class="img-cripto"
-          [src]="'assets/' + cripto?.name + '.png'"
-          alt=""
-        />
-        <span class="name-cripto">{{ criptoName }}</span>
+        <ng-container *ngIf="!loading">
+          <img
+            class="img-cripto"
+            [src]="'assets/' + cripto?.name + '.png'"
+            alt="Imagem-cripto"
+          />
+        </ng-container>
+        <ng-container *ngIf="loading">
+          <app-placeholder-loading
+            width="60px"
+            height="60px"
+          ></app-placeholder-loading>
+        </ng-container>
+        <span class="name-cripto" *ngIf="!loading">{{ criptoName }}</span>
+        <ng-container *ngIf="loading">
+          <app-placeholder-loading
+            width="150px"
+            height="40px"
+          ></app-placeholder-loading>
+        </ng-container>
         <span class="btc">{{ cripto?.tag }}</span>
         <span
           class="star"
@@ -52,13 +66,24 @@
 
     <div class="sector-graphic">
       <div class="image-preferences">
-        <img
-          class="graphic-image"
-          [src]="cripto?.graph"
-          [alt]="cripto?.name"
-          width="100%"
-          height="100%"
-        />
+        <ng-container *ngIf="!loading">
+          <img
+            class="graphic-image"
+            [src]="cripto?.graph"
+            [alt]="cripto?.name"
+            width="100%"
+            height="100%"
+          />
+        </ng-container>
+        <ng-container *ngIf="loading">
+          <div class="loading-image">
+            <mat-spinner
+              mode="indeterminate"
+              diameter="60"
+              color="primary"
+            ></mat-spinner>
+          </div>
+        </ng-container>
       </div>
 
       <div class="scenario-wrapper">
