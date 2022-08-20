@@ -17,12 +17,14 @@
             alt="Imagem-cripto"
           />
         </ng-container>
-        <ng-container *ngIf="loading">
-          <app-placeholder-loading
-            width="60px"
-            height="60px"
-          ></app-placeholder-loading>
-        </ng-container>
+        <div class="loading-cripto" *ngIf="loading">
+          <ng-container>
+            <app-placeholder-loading
+              width="60px"
+              height="60px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
         <span class="name-cripto" *ngIf="!loading">{{ criptoName }}</span>
         <ng-container *ngIf="loading">
           <app-placeholder-loading
@@ -30,37 +32,113 @@
             height="40px"
           ></app-placeholder-loading>
         </ng-container>
-        <span class="btc">{{ cripto?.tag }}</span>
+        <ng-container *ngIf="!loading">
+          <span class="btc">{{ cripto?.tag }}</span>
+        </ng-container>
+        <div *ngIf="loading" [ngStyle]="{ 'margin-left': '5px' }">
+          <ng-container>
+            <app-placeholder-loading
+              width="30px"
+              height="19px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
         <span
           class="star"
           (click)="setFavoriteCripto()"
           [ngClass]="{ filled: cripto?.isFavorite }"
+          *ngIf="!loading"
           ><img class="star-image" src="assets/star.png" alt=""
         /></span>
+
+        <div class="loading-star" *ngIf="loading">
+          <ng-container>
+            <app-placeholder-loading
+              width="32px"
+              height="32px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
       </div>
       <div class="sector-value">
-        <span class="currency-value">{{ cripto?.currencyValue }}</span>
-        <span class="rate">
+        <span class="currency-value" *ngIf="!loading">{{
+          cripto?.currencyValue
+        }}</span>
+        <div *ngIf="loading" [ngStyle]="{ 'margin-right': '15px' }">
+          <ng-container>
+            <app-placeholder-loading
+              width="218px"
+              height="40px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
+        <span class="rate" *ngIf="!loading">
           <img src="assets/polygon-white.png" alt="seta" />
           <span class="rate-porcent">{{ cripto?.lastRate }}</span>
         </span>
+        <ng-container *ngIf="loading">
+          <app-placeholder-loading
+            width="59px"
+            height="25px"
+          ></app-placeholder-loading>
+        </ng-container>
       </div>
     </div>
 
     <div class="sector-informations">
       <div class="sector-rank">
-        <span class="rank">Rank {{ cripto?.rank }}</span>
-        <span class="type">{{ cripto?.type }}</span>
-        <span class="list-count"
-          >On {{ cripto?.watchListCount }} watchlists</span
-        >
+        <span class="rank" *ngIf="!loading">Rank {{ cripto?.rank }}</span>
+        <div *ngIf="loading" class="loading-rank">
+          <ng-container>
+            <app-placeholder-loading
+              width="50px"
+              height="20px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
+        <span class="type" *ngIf="!loading">{{ cripto?.type }}</span>
+        <div *ngIf="loading" class="loading-type">
+          <ng-container>
+            <app-placeholder-loading
+              width="40px"
+              height="20px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
+        <span class="list-count" *ngIf="!loading">
+          On {{ cripto?.watchListCount }} watchlists
+        </span>
+        <div *ngIf="loading" class="loading-list-count">
+          <ng-container>
+            <app-placeholder-loading
+              width="145px"
+              height="19px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
       </div>
       <div class="sector-fall">
-        <span class="eth">13.73 {{ cripto?.tag }}</span>
-        <span class="fall">
+        <span class="eth" *ngIf="!loading">13.73 {{ cripto?.tag }}</span>
+        <div *ngIf="loading">
+          <ng-container>
+            <app-placeholder-loading
+              width="58px"
+              height="16px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
+        <span class="fall" *ngIf="!loading">
           <img src="assets/polygon-red.png" alt="seta-red" />
           <span class="fall-value">4,93%</span>
         </span>
+        <div *ngIf="loading" class="loading-fall">
+          <ng-container>
+            <app-placeholder-loading
+              width="45px"
+              height="16px"
+            ></app-placeholder-loading>
+          </ng-container>
+        </div>
       </div>
     </div>
 
@@ -87,14 +165,25 @@
       </div>
 
       <div class="scenario-wrapper">
-        <ng-container *ngFor="let scenario of scenarios">
-          <div class="scenario-child">
-            <span class="scenario-scenario">{{ scenario?.scenario }}</span>
-            <span class="scenario-value">{{ scenario?.value }}</span>
-            <span class="rate">
-              <img src="assets/polygon-green.png" alt="seta" />
-              <span class="scenario-rate">{{ scenario?.rate }}</span>
-            </span>
+        <ng-container *ngIf="!loading">
+          <ng-container *ngFor="let scenario of scenarios">
+            <div class="scenario-child">
+              <span class="scenario-scenario">{{ scenario?.scenario }}</span>
+              <span class="scenario-value">{{ scenario?.value }}</span>
+              <span class="rate">
+                <img src="assets/polygon-green.png" alt="seta" />
+                <span class="scenario-rate">{{ scenario?.rate }}</span>
+              </span>
+            </div>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="loading">
+          <div class="loading-wrapper">
+            <mat-spinner
+              mode="indeterminate"
+              diameter="60"
+              color="primary"
+            ></mat-spinner>
           </div>
         </ng-container>
       </div>

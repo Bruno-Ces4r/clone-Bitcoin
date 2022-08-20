@@ -37,6 +37,10 @@
         font-weight: 700;
         width: 334px;
 
+        .loading-cripto {
+          margin-right: 5px;
+        }
+
         .name-cripto {
           font-size: 32px;
           line-height: 39px;
@@ -57,6 +61,10 @@
           color: #58667e;
           padding: 6px;
           font-size: 12px;
+        }
+
+        .loading-star {
+          margin-left: 15px;
         }
 
         .star {
@@ -116,29 +124,52 @@
 
       .sector-rank {
         width: 373px;
-        .rank {
+        display: flex;
+
+        .loading-rank {
           margin-left: 80px;
+        }
+
+        .rank {
           background-color: #58667e;
           border-radius: 4px;
           font-size: 12px;
           color: #eff2f5;
-          padding: 2px 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 6px;
+          margin-left: 80px;
+        }
+
+        .loading-type {
+          margin-left: 27px;
         }
 
         .type {
           background-color: #eff2f5;
           border-radius: 4px;
-          padding: 2px 6px;
+          padding: 0px 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           color: #58667e;
           font-size: 12px;
           margin-left: 27px;
+        }
+
+        .loading-list-count {
+          margin-left: 12px;
         }
 
         .list-count {
           background-color: #eff2f5;
           border-radius: 4px;
           color: #58667e;
-          padding: 2px 6px;
+          padding: 0px 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-size: 12px;
           margin-left: 12px;
         }
@@ -154,6 +185,10 @@
           color: #58667e;
           font-size: 12px;
           font-weight: 400;
+        }
+
+        .loading-fall {
+          margin-left: 16px;
         }
 
         .fall {
@@ -199,6 +234,13 @@
         flex-wrap: wrap;
         column-gap: 80px;
         font-weight: 700;
+
+        .loading-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
 
         .scenario-child {
           display: flex;
@@ -391,7 +433,7 @@
 
   .main .content .sector-informations .sector-rank {
     width: auto;
-    margin: 0px;
+    margin: 0;
 
     .rank {
       background-color: #58667e;
@@ -419,8 +461,19 @@
     align-items: center;
   }
 
+  .main .content .sector-graphic .image-preferences {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 348px;
+    height: auto;
+    margin-bottom: 60px;
+  }
+
   .main .content .sector-graphic .image-preferences .graphic-image {
     width: 100%;
+    height: fit-content;
   }
 }
 
@@ -436,7 +489,7 @@
     .img-cripto {
       height: 35px;
       width: 35px;
-      margin-right: 0px;
+      margin-right: 8px;
     }
 
     .name-cripto {
@@ -464,6 +517,47 @@
     row-gap: 2px;
   }
 
+  .main .content .sector-informations .sector-rank {
+    width: auto;
+    margin: 0;
+    .rank {
+      font-size: 11px;
+    }
+
+    .type {
+      font-size: 11px;
+    }
+
+    .list-count {
+      font-size: 11px;
+    }
+  }
+
+  .main .content .sector-informations .sector-fall {
+    display: flex;
+    margin: 0px 0px 0px 5px;
+    justify-content: center;
+    align-items: center;
+
+    .eth {
+      font-size: 11px;
+    }
+
+    .fall .fall-value {
+      font-size: 11px;
+    }
+  }
+
+  .main .content .sector-graphic .image-preferences {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 348px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
   .main .content .sector-graphic .scenario-wrapper {
     display: flex;
     flex-direction: row;
@@ -472,6 +566,6 @@
     flex-wrap: wrap;
     justify-content: center;
     font-weight: 700;
-    column-gap: 0px;
+    column-gap: 20px;
   }
 }
