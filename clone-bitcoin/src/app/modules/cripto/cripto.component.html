@@ -17,30 +17,23 @@
             alt="Imagem-cripto"
           />
         </ng-container>
-        <div class="loading-cripto" *ngIf="loading">
+        <div class="loading-image-cripto" *ngIf="loading">
           <ng-container>
-            <app-placeholder-loading
-              width="60px"
-              height="60px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span class="name-cripto" *ngIf="!loading">{{ criptoName }}</span>
-        <ng-container *ngIf="loading">
-          <app-placeholder-loading
-            width="150px"
-            height="40px"
-          ></app-placeholder-loading>
-        </ng-container>
+        <div class="loading-name" *ngIf="loading">
+          <ng-container>
+            <app-placeholder-loading></app-placeholder-loading>
+          </ng-container>
+        </div>
         <ng-container *ngIf="!loading">
           <span class="btc">{{ cripto?.tag }}</span>
         </ng-container>
-        <div *ngIf="loading" [ngStyle]="{ 'margin-left': '5px' }">
+        <div *ngIf="loading" class="loading-btc">
           <ng-container>
-            <app-placeholder-loading
-              width="30px"
-              height="19px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span
@@ -53,10 +46,7 @@
 
         <div class="loading-star" *ngIf="loading">
           <ng-container>
-            <app-placeholder-loading
-              width="32px"
-              height="32px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
       </div>
@@ -64,24 +54,20 @@
         <span class="currency-value" *ngIf="!loading">{{
           cripto?.currencyValue
         }}</span>
-        <div *ngIf="loading" [ngStyle]="{ 'margin-right': '15px' }">
+        <div *ngIf="loading" class="loading-value">
           <ng-container>
-            <app-placeholder-loading
-              width="218px"
-              height="40px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span class="rate" *ngIf="!loading">
           <img src="assets/polygon-white.png" alt="seta" />
           <span class="rate-porcent">{{ cripto?.lastRate }}</span>
         </span>
-        <ng-container *ngIf="loading">
-          <app-placeholder-loading
-            width="59px"
-            height="25px"
-          ></app-placeholder-loading>
-        </ng-container>
+        <div *ngIf="loading" class="loading-rate">
+          <ng-container>
+            <app-placeholder-loading></app-placeholder-loading>
+          </ng-container>
+        </div>
       </div>
     </div>
 
@@ -90,19 +76,13 @@
         <span class="rank" *ngIf="!loading">Rank {{ cripto?.rank }}</span>
         <div *ngIf="loading" class="loading-rank">
           <ng-container>
-            <app-placeholder-loading
-              width="50px"
-              height="20px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span class="type" *ngIf="!loading">{{ cripto?.type }}</span>
         <div *ngIf="loading" class="loading-type">
           <ng-container>
-            <app-placeholder-loading
-              width="40px"
-              height="20px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span class="list-count" *ngIf="!loading">
@@ -110,21 +90,15 @@
         </span>
         <div *ngIf="loading" class="loading-list-count">
           <ng-container>
-            <app-placeholder-loading
-              width="145px"
-              height="19px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
       </div>
       <div class="sector-fall">
         <span class="eth" *ngIf="!loading">13.73 {{ cripto?.tag }}</span>
-        <div *ngIf="loading">
+        <div *ngIf="loading" class="loading-eth">
           <ng-container>
-            <app-placeholder-loading
-              width="58px"
-              height="16px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
         <span class="fall" *ngIf="!loading">
@@ -133,10 +107,7 @@
         </span>
         <div *ngIf="loading" class="loading-fall">
           <ng-container>
-            <app-placeholder-loading
-              width="45px"
-              height="16px"
-            ></app-placeholder-loading>
+            <app-placeholder-loading></app-placeholder-loading>
           </ng-container>
         </div>
       </div>

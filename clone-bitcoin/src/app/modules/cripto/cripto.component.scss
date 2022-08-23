@@ -3,7 +3,7 @@
 .main {
   width: 100%;
   background-color: #f9fbfd;
-  padding: 60px 0px 0px 0px;
+  padding: 45px 0px 0px 0px;
   .content {
     margin: 0 auto;
     @include grid-width;
@@ -37,8 +37,9 @@
         font-weight: 700;
         width: 334px;
 
-        .loading-cripto {
-          margin-right: 5px;
+        .loading-name {
+          width: 150px;
+          height: 40px;
         }
 
         .name-cripto {
@@ -47,11 +48,24 @@
           color: var(--color-black);
         }
 
+        .loading-image-cripto {
+          margin-right: 5px;
+          width: 60px;
+          height: 60px;
+        }
+
         .img-cripto {
           height: 60px;
           width: 60px;
           margin-right: 19px;
         }
+
+        .loading-btc {
+          margin-left: 5px;
+          width: 30px;
+          height: 19px;
+        }
+
         .btc {
           display: flex;
           align-items: center;
@@ -65,6 +79,8 @@
 
         .loading-star {
           margin-left: 15px;
+          width: 32px;
+          height: 32px;
         }
 
         .star {
@@ -93,8 +109,19 @@
         font-weight: 700;
         margin-left: 400px;
 
+        .loading-value {
+          margin-right: 15px;
+          width: 218px;
+          height: 40px;
+        }
+
         .currency-value {
           font-size: 32px;
+        }
+
+        .loading-rate {
+          width: 59px;
+          height: 25px;
         }
 
         .rate {
@@ -118,8 +145,7 @@
 
     .sector-informations {
       display: flex;
-      // justify-content: space-between;
-      margin-top: 15px;
+      margin-top: 10px;
       font-weight: 700;
 
       .sector-rank {
@@ -128,6 +154,8 @@
 
         .loading-rank {
           margin-left: 80px;
+          width: 50px;
+          height: 20px;
         }
 
         .rank {
@@ -138,12 +166,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 0px 6px;
+          padding: 2px 6px;
           margin-left: 80px;
         }
 
         .loading-type {
-          margin-left: 27px;
+          margin-left: 12px;
+          width: 40px;
+          height: 20px;
         }
 
         .type {
@@ -155,11 +185,13 @@
           align-items: center;
           color: #58667e;
           font-size: 12px;
-          margin-left: 27px;
+          margin-left: 12px;
         }
 
         .loading-list-count {
           margin-left: 12px;
+          width: 145px;
+          height: 19px;
         }
 
         .list-count {
@@ -181,6 +213,11 @@
         align-items: center;
         margin-left: 365px;
 
+        .loading-eth {
+          width: 58px;
+          height: 16px;
+        }
+
         .eth {
           color: #58667e;
           font-size: 12px;
@@ -189,6 +226,8 @@
 
         .loading-fall {
           margin-left: 16px;
+          width: 45px;
+          height: 16px;
         }
 
         .fall {
@@ -220,9 +259,10 @@
         height: 348px;
         display: flex;
         width: 100%;
+        margin-bottom: 40px;
         .graphic-image {
           max-width: 720px;
-          max-height: 348px;
+          max-height: fit-content;
         }
       }
 
@@ -304,7 +344,7 @@
 
   .main .content .sector-graphic .graphic-image {
     width: 620px;
-    height: 348px;
+    height: fit-content;
   }
 
   .main .content .sector-cripto .sector-value {
@@ -338,7 +378,7 @@
     justify-content: center;
     max-width: 100%;
     max-height: 348px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .main .content .sector-cripto {
@@ -356,7 +396,7 @@
 
   .main .content .sector-informations {
     display: flex;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 700;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -392,6 +432,22 @@
   .main .content .sector-cripto {
     display: block;
     margin-top: 45px;
+
+    .cripto {
+      .img-cripto {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+      }
+
+      .name-cripto {
+        font-size: 25px;
+      }
+
+      .star {
+        padding: 5px 6px;
+      }
+    }
   }
 
   .main .content .sector-cripto .sector-value {
@@ -401,7 +457,19 @@
     margin-left: 12px;
     flex-wrap: wrap;
     row-gap: 10px;
-    margin-top: 15px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+
+    .loading-value {
+      margin-right: 15px;
+      width: 135px;
+      height: 24px;
+    }
+
+    .loading-rate {
+      width: 59px;
+      height: 23px;
+    }
   }
 
   .main .content .sector-cripto .sector-value .currency-value {
@@ -423,7 +491,7 @@
 
   .main .content .sector-informations {
     display: flex;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 700;
     flex-wrap: wrap;
     row-gap: 15px;
@@ -434,6 +502,10 @@
   .main .content .sector-informations .sector-rank {
     width: auto;
     margin: 0;
+
+    .loading-rank {
+      margin-left: 0px;
+    }
 
     .rank {
       background-color: #58667e;
@@ -451,6 +523,12 @@
       color: #58667e;
       font-size: 12px;
       margin-left: 12px;
+    }
+
+    .loading-list-count {
+      margin-left: 12px;
+      width: 135px;
+      height: 19px;
     }
   }
 
@@ -486,16 +564,33 @@
     flex-wrap: wrap;
     row-gap: 3px;
 
+    .loading-image-cripto {
+      margin-right: 5px;
+      width: 35px;
+      height: 35px;
+    }
+
     .img-cripto {
       height: 35px;
       width: 35px;
       margin-right: 8px;
     }
 
+    .loading-name {
+      width: 85px;
+      height: 30px;
+    }
+
     .name-cripto {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 39px;
       color: var(--color-black);
+    }
+
+    .loading-star {
+      margin-left: 15px;
+      width: 26px;
+      height: 24px;
     }
 
     .star {
@@ -515,6 +610,10 @@
     width: 100%;
     flex-wrap: wrap;
     row-gap: 2px;
+  }
+
+  .main .content .sector-cripto .sector-value .currency-value {
+    font-size: 16px;
   }
 
   .main .content .sector-informations .sector-rank {

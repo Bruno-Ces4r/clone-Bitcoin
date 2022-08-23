@@ -31,7 +31,7 @@ export class SubHeaderComponent implements OnInit {
     {
       routerPath: 'shiba-inu',
       imagePath: 'assets/shiba-inu.png',
-      name: 'Shiba Inu',
+      name: 'Shiba-Inu',
     },
   ];
 

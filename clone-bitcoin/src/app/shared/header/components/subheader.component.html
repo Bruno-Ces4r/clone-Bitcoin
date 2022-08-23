@@ -1,13 +1,44 @@
 <div class="sub-nav">
+  <!--Menu Principal do Projeto-->
+
   <div class="sub-items">
     <ng-container *ngFor="let subheaderitem of subHeaderItems">
       <!--Passei a rota no (a), Passei o src na img pelo path, passei o (alt)-->
-      <a [routerLink]="'/' + subheaderitem.routerPath">
+      <a
+        [routerLink]="'/' + subheaderitem.routerPath"
+        [ngStyle]="{ 'text-transform': 'Capitalize' }"
+      >
         <!--Engloba a propriedade no colchetes, recebe um valor (sem ser string e etc)-->
         <img [src]="subheaderitem.imagePath" [alt]="subheaderitem.name" />
         {{ subheaderitem.name }}
         <!--Nome dos Itens-->
       </a>
     </ng-container>
+  </div>
+
+  <!--Menu Após Width Reduzir Aqui!-->
+
+  <div class="drop-menu">
+    <mat-icon [matMenuTriggerFor]="menu" aria-label="Menu" class="menu-mat"
+      >menu</mat-icon
+    >
+    <mat-menu #menu="matMenu">
+      <ng-container *ngFor="let subheaderitem of subHeaderItems">
+        <a
+          [ngStyle]="{
+            'text-transform': 'capitalize',
+            display: 'flex',
+            'align-items': 'center'
+          }"
+          mat-menu-item
+          [routerLink]="'/' + subheaderitem.routerPath"
+          ><img
+            [src]="subheaderitem.imagePath"
+            [ngStyle]="{ 'margin-right': '10px' }"
+          />
+          {{ subheaderitem.name }}</a
+        >
+      </ng-container>
+    </mat-menu>
   </div>
 </div>
